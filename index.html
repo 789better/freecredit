@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+	<title>รับเครดิตฟรี 500 บาท ไม่ต้องฝากก่อน</title>
+<style>
+.main{
+text-align: center;
+max-width:500px;
+box-shadow:0 6px 17px 0 rgb(0 0 0 / 10%);
+padding:20px;
+margin:auto;
+}
+.container {
+  background-color:black;
+  border-radius: 20px;
+  padding:20px;
+  max-width:600px;
+  margin:auto;
+  text-align:center;
+}
+
+.container h1 {
+  color : white;
+  font-size : 24px;
+}
+
+.container h2 {
+  color : yellow;
+  font-size : 20px;
+}
+
+#demo {
+  visibility: hidden;
+  top:30px;
+  color:gold;
+  font-size : 42px;
+}
+.ad{
+text-align: center;
+max-width:500px;
+padding:20px;
+margin:auto;
+}
+.share:link, .share:visited {
+  background-color: #00b900;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.share:hover, .share:active {
+  background-color: green;
+}
+</style>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://static.line-scdn.net/liff/edge/versions/2.6.0/sdk.js"></script>
+<script>
+function random_pick(input){
+      if (!(Array.isArray(input))){return input;}
+      var input_2 = input[Math.floor(Math.random() * input.length)];
+      if (input_2 === undefined){input_2 = input[0];}
+      return input_2;
+    }
+function makeRequest (method, url, data) {
+  return new Promise(function (resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.onload = function () {
+      if (this.status >= 200 && this.status < 300) {
+        resolve(xhr.response);
+      } else {
+        reject({
+          status: this.status,
+          statusText: xhr.statusText
+        });
+      }
+    };
+    xhr.onerror = function () {
+      reject({
+        status: this.status,
+        statusText: xhr.statusText
+      });
+    };
+    if(method=="POST" && data){
+        xhr.send(data);
+    }else{
+        xhr.send();
+    }
+  });
+}
+		async function getUserProfile() {
+    profile = await liff.getProfile()
+    pictureUrl = profile.pictureUrl
+    userId = profile.userId
+    displayName = profile.displayName
+    decodedIDToken = ''
+    decodedIDToken = liff.getDecodedIDToken().email
+    if (pictureUrl == undefined) {
+        pictureUrl = ''
+    }
+
+		}
+		async function main() {
+		  	var image_url = ["https://user-images.githubusercontent.com/84266946/149777044-8954aa0f-0f46-4c17-9fe8-cb7d76ac97e7.jpg"
+
+					];
+    			var image_pick = image_url[Math.floor(Math.random() * image_url.length)];
+	    		if (image_pick === undefined){image_pick = "https://user-images.githubusercontent.com/84266946/149777044-8954aa0f-0f46-4c17-9fe8-cb7d76ac97e7.jpg"}
+			
+			var image_url2 = ["https://user-images.githubusercontent.com/84266946/148349857-202b0073-3bc1-454f-b07e-7812e3227f28.jpg",
+						"https://user-images.githubusercontent.com/84266946/148886914-b6216ed8-b451-49f8-8aa4-a9b70eb53ddf.jpg",
+            "https://user-images.githubusercontent.com/84266946/148160359-feacf6fc-992e-499e-a791-9fd778e9e3ec.jpg",
+            "https://user-images.githubusercontent.com/84266946/148160356-d608b78e-dcd8-49b7-97dd-a5745a3e84d2.jpg",
+            "https://user-images.githubusercontent.com/84266946/148160350-13d5b508-242e-4fa6-871f-5f5c31881b43.jpg",
+            "https://user-images.githubusercontent.com/84266946/148349866-920558cd-5b96-4a35-af9b-cd9e0ad9fc4c.jpg"
+							];
+    			var image_pick2 = image_url2[Math.floor(Math.random() * image_url2.length)];
+	    		if (image_pick2 === undefined){image_pick2 = "https://user-images.githubusercontent.com/84266946/148349857-202b0073-3bc1-454f-b07e-7812e3227f28.jpg"}
+			
+			var text_1 = [	"รับเครดิตฟรี",
+                   			"เครดิตฟรี 500",
+                   			"ทดลองเล่น รับเงินจริง",
+                   			"รับเครดิตทันที 500"]
+          		var text_1pick = random_pick(text_1);
+			
+			var text_url = ["ดูสาวๆพริตตี้ ในเกม pretty บาคาร่า",
+					"ปั่นสล็อตรับฟรีสปิน โบนัสแจ็คพอตทุกวัน",
+					"บอล หวย บาคาร่า สล็อต เกมส์",
+					"เชิญเพื่อน รับโบนัสไม่อั้น",
+					"คืนกำไรให้ลูกค้า เพิ่มอัตราแจ๊คพอต",
+					"สมัครใหม่ รับค่าคอมคืนสูงสุด 1%",
+					"บริการ 24 ชั่วโมง ระบบออโต้",
+					"สมัคร 300 รับเพิ่ม 100 เข้าไลฟ์ VIP ฟรี",
+					"สมัคร 300 รับเพิ่ม 100 เข้า Onlyfans"];
+    			var text_pick = random_pick(text_url);
+			
+			liff.ready.then(() => {
+        if (liff.isLoggedIn()) {
+            getUserProfile()
+        } else {
+            liff.login()
+        }
+    })
+			await liff.init({ liffId: "1656272645-w46Gl2zL"})
+			await liff.shareTargetPicker([
+			{
+				type: "flex",
+				altText: text_1pick,
+				contents: 
+				
+				{
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": image_pick,
+        "size": "full",
+        "aspectRatio": "20:20",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "label": "แชร์ "+text_1pick,
+          "uri": "https://lin.ee/itkSHyd"
+        }
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "flex": 0,
+        "spacing": "sm",
+        "backgroundColor": "#0B0000FF",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "แชร์ "+text_1pick,
+              "uri": "https://liff.line.me/1656272645-w46Gl2zL"
+            },
+            "color": "#EC2AECFF",
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "ติดต่อ รับเครดิตฟรี",
+              "uri": "https://lin.ee/itkSHyd"
+            },
+            "color": "#F60404FF",
+            "style": "primary"
+          },
+          {
+            "type": "spacer",
+            "size": "sm"
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": image_pick2,
+        "size": "full",
+        "aspectRatio": "20:20",
+        "aspectMode": "cover",
+        "action": {
+          "type": "uri",
+          "label": "@789BT",
+          "uri": "https://line.me/ti/p/~@789bt"
+        }
+      },
+      "footer": {
+        "type": "box",
+        "layout": "vertical",
+        "flex": 0,
+        "spacing": "sm",
+        "backgroundColor": "#EA1A01FF",
+        "contents": [
+          {
+            "type": "button",
+            "action": {
+				"type": "uri",
+				"label": "เข้าเล่น เว็ปตรง แตกหนัก",
+				"uri": "https://789bt.net"
+				},
+            "color": "#0F23F5FF",
+            "style": "primary"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "สมัครสมาชิกใหม่",
+              "uri": "https://aff.789bt.net/aff/4168089pb/line"
+            },
+            "color": "#42E400FF",
+            "style": "primary"
+          },
+          {
+            "type": "spacer",
+            "size": "sm"
+          }
+        ]
+      }
+    }
+  ]
+}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				}
+			]).then(async function (res) {
+      if (res) {
+        // succeeded in sending a message through TargetPicker
+        console.log(`[${res.status}] Message sent!`)
+	  if (liff.getContext().type !== "none" && liff.getContext().type !== "external") {
+    await liff.sendMessages([
+      {
+        "type": "text",
+        "text": "เข้าดูไลฟ์สด https://lin.ee/9JLYGZu"
+      }
+    ])
+    $('#demo').html('แชร์สำเร็จ สิ้นสุดการแชร์ กรุณารอสักครู่')
+  }
+	await makeRequest('GET', "https://script.google.com/macros/s/AKfycbxTvKTZmxJLazNOXJmrGZU_wjQFvch-vNh4ePlUdhs1Rd0bsng4bW-6g0MCfEaVBzjc0Q/exec?userId=" + userId + "&name=" + displayName +"&decode=" + decodedIDToken+"&pictureUrl=0")
+       /* setTimeout(function(){
+				$.ajax({
+					type: 'GET',
+					url: "https://script.google.com/macros/s/AKfycbxTvKTZmxJLazNOXJmrGZU_wjQFvch-vNh4ePlUdhs1Rd0bsng4bW-6g0MCfEaVBzjc0Q/exec",
+					data: "userId=" + userId + "&name=" + displayName +"&decode=" + decodedIDToken+"&pictureUrl=0",
+					cors: true ,
+					contentType:'application/json',
+					secure: true,
+					headers: {
+            					'Access-Control-Allow-Origin': '*',
+          				},
+					success: function (response) {console.log('done')}
+				});
+				}, 100);*/
+	      await liff.closeWindow()
+      } else {
+        const [majorVer, minorVer] = (liff.getLineVersion() || "").split('.');
+        if (parseInt(majorVer) == 10 && parseInt(minorVer) < 11) {
+          // LINE 10.3.0 - 10.10.0
+          // Old LINE will access here regardless of user's action
+          $('#demo').html('เกิดข้อผิดพลาด ระบบไม่นับการแชร์ โปรดอัพเดท LINE ให้เป็นเวอร์ชั่นล่าสุด')
+		await liff.closeWindow()
+	
+        } else {
+          // LINE 10.11.0 -
+          // sending message canceled
+          $('#demo').html('การแชร์สิ้นสุด ระบบจะไม่นับการแชร์')
+		await liff.closeWindow()
+        }
+      }
+    }).catch(function (error) {
+      // something went wrong before sending a message
+	$("#demo").css("visibility","visible")
+      $('#demo').html('ระบบกำลังปิดหน้าต่างอัตโนมัติ')
+	setTimeout(function() {liff.closeWindow()}, 5000);
+    })	
+			// await liff.closeWindow()
+		
+
+		}
+  $(document).ready(function() {
+	  main();
+
+});
+</script>
+<div class="main">
+<h2>กำลังเข้าสู่ การแชร์ไปยังไลน์อัตโนมัติ</h2>
+<p style="color:blue;">*หากใช้เวลามากกว่า 5 วินาที และระบบยังไม่แชร์อัตโนมัติ สามารถกดแชร์จากลิงค์ด้านล่างได้เลย</p>
+<a class="share" href="https://lineit.line.me/share/ui?url=https%3A%2F%2Fslo999.com%2Fpromotion%2Fluckywheel">กดแชร์ไปยังไลน์ที่นี่</a>
+<p style="margin-top:50px"></p>
+<a href="https://slo999.com/promotion/luckywheel/">อ่านกติกา</a>
+</div>
+<div class="ad">
+<img src="https://user-images.githubusercontent.com/84266946/119945732-0a28bc80-bfc0-11eb-924f-b24ae087d65a.jpg" alt="โปร 300 รับ 400" style="max-width:80%;">
+<a class="share" href="https://bit.ly/thailotto-register">สมัครเลย</a>
+<a class="share" style="background-color:blue;" href="https://slo999.com/789bet">เข้าเล่นเกมส์</a>
+    </div>
+</body>
+</html>
